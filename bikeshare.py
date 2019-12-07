@@ -31,7 +31,7 @@ def get_filters():
     month = input('\n choose  month : January, February, March, April, May, June, All:\n').lower()
    
 # TO DO: get user input for day of week (all, monday, tuesday, stope... sunday)
-    day = input('\n Enter the  day :\n').capitalize()
+    day = input('\n Enter the  day : sunday ...... starday :\n').capitalize()
     
     print('-'*40)
     return city, month, day
@@ -61,8 +61,8 @@ def load_data(city, month, day):
  
 
     if month != 'all':
-        months = ['january', 'february', 'march', 'april', 'may', 'june']
-        month = months.index(month) + 1
+        months = {'january':1, 'february':2, 'march':3, 'april':4, 'may':5, 'june':6}
+        month = months[month]
         df = df[df['month'] == month]
 
     if day != 'All':
