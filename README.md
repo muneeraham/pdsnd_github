@@ -2,7 +2,7 @@
 starday 12/7/2019
 
 ### Project Title
-the 3 ptoject 
+gitube project
 
 ### Description
 github project 
