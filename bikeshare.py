@@ -50,7 +50,7 @@ def load_data(city, month, day):
 """
 
 
-    df = pd.read_csv(CITY_DATA[city])
+    df = pd.read_csv(CITY_DATA[city.lower()])
     
 
     df['Start Time'] = pd.to_datetime(df['Start Time'])
@@ -62,8 +62,7 @@ def load_data(city, month, day):
 
     if month != 'all':
         months = {'january':1, 'february':2, 'march':3, 'april':4, 'may':5, 'june':6}
-        month = months[month]
-        df = df[df['month'] == month]
+        df = df[df['month'] == months[month]]
 
     if day != 'All':
         df = df[df['day_of_week'] == day]
